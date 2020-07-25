@@ -3,8 +3,10 @@
 
 import logging
 
+from werkzeug.exceptions import Forbidden, NotFound
 from odoo import fields, http, tools, _
 from odoo.http import request
+from odoo.addons.website.controllers.main import QueryURL
 from odoo.addons.website_sale.controllers.main import WebsiteSale
 
 _logger = logging.getLogger(__name__)
