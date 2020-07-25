@@ -4,5 +4,3 @@
 
     better google search console
 """
-
-from . import controllers
