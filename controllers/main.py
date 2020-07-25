@@ -57,6 +57,6 @@ class WebsiteSaleGuadalstoreProductSeo(WebsiteSale):
             'product': product,
             'optional_product_ids': [p.with_context({'active_id': p.id}) for p in product.optional_product_ids],
             'get_attribute_exclusions': self._get_attribute_exclusions,
-            'seoldjson': "{'name': 'casa'}"
+            'seoldjson': "{'name': 'casa'}",
         }
         return request.render("website_sale.product", values)

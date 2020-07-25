@@ -3,9 +3,7 @@
 
 	<template id="structure_data" inherit_id="web.layout" name="Product seo assets">
 		<xpath expr="html/head" position="after">
-			<t if="seoldjson">
-				<script type="application/json+ld"><t esc="seoldjson" /></script>
-			</t>
+			<script type="application/ld+json"><t t-esc="seoldjson" /></script>
 		</xpath>
 	</template>
 
