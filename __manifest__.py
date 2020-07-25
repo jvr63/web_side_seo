@@ -6,6 +6,6 @@
     'category': 'Website',
     'version': '1.0',
     'depends': ["website_sale"],
-    'data': [],
+    'data': ['views/website_seo.xml'],
     'installable': True,
 }

@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-	<template id="structure_data" inherit_id="web.assets_frontend" name="Product info backend assets">
-		<xpath expr="//head" position=".">
-			<script type="application/json+ld">
-			{
-				"@context": "http://schema.org",
-				"@type": "ItemList"
-			}
-			</script>
+	<template id="structure_data" inherit_id="web.layout" name="Product info backend assets">
+		<xpath expr="html/head/script[last()]" position="after">
+			<t if="seoldjson">
+				<script type="application/json+ld"><t esc="seoldjson"></script>
+			</t>
 		</xpath>
 	</template>
 

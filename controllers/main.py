@@ -14,11 +14,10 @@ class WebsiteSaleGuadalstoreProductSeo(WebsiteSale):
     @http.route()
     def product(self, product, category='', search='', **kwargs):
         """ Added ref and barcode to original response """
-        res = super(WebsiteSaleGuadalstoreProductInfo, self).product(product, category, search, **kwargs)
+        res = super(WebsiteSaleGuadalstoreProductSeo, self).product(product, category, search, **kwargs)
 
-        ldjson='<script type="application/ld+json">{}</script>'
-        pos = res.find("</head>")
-        if pos > 0:
-            res = res[:pos] + ldjson + res[pos:]
+        res.update({
+            seoldjson: "{'name': 'El nombre'}"
+        })
 
         return res
