@@ -45,7 +45,7 @@ class WebsiteSaleGuadalstoreProductSeo(WebsiteSale):
             product_context['pricelist'] = pricelist.id
             product = product.with_context(product_context)
 
-        seoldjson = {"title": product.name}
+        seoldjson = {"name": product.name}
 
         values = {
             'search': search,
