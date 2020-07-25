@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+	<template id="GS_assets_backend_inherit_sale" inherit_id="web.assets_frontend" name="Product info backend assets">
+		<xpath expr="//head" position=".">
+			<script type="application/json+ld">
+			{
+				"@context": "http://schema.org",
+				"@type": "ItemList"
+			}
+			</script>
+		</xpath>
+	</template>
+
 </odoo>
