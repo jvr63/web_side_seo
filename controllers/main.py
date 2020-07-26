@@ -47,8 +47,6 @@ class WebsiteSaleGuadalstoreProductSeo(WebsiteSale):
             product_context['pricelist'] = pricelist.id
             product = product.with_context(product_context)
 
-        seoldjson = {'name': product.name}
-
         values = {
             'search': search,
             'category': category,
@@ -62,6 +60,5 @@ class WebsiteSaleGuadalstoreProductSeo(WebsiteSale):
             'product': product,
             'optional_product_ids': [p.with_context({'active_id': p.id}) for p in product.optional_product_ids],
             'get_attribute_exclusions': self._get_attribute_exclusions,
-            'seoldjson': seoldjson,
         }
         return request.render("website_sale.product", values)

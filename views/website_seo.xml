@@ -4,26 +4,7 @@
 	<template id="structure_data" inherit_id="web.layout" name="Product seo assets">
 		<xpath expr="html/head" position="after">
 			<t t-if="seoldjson">
-				<script type="application/ld+json">
-					{
-					        "@context": "https://schema.org/",
-						"@type": "Product",
-						"name": <t t-esc="seoldjson['name']" />,
-						"description": "",
-						"image": [],
-						"sku": ,
-						"offers": {
-							"@type": "Offer",
-							"url": ,
-							"priceCurrency": "EUR",
-							"price": <t t-esc="combination_info['price']" />,
-							"seller": {
-								"@type": "Organizartion"
-								"name": "Guadalstore"
-							}
-						}
-					}
-				</script>
+				<script type="application/ld+json"></script>
 			</t>
 		</xpath>
 	</template>
