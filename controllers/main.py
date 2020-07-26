@@ -10,6 +10,8 @@ from odoo.http import request
 from odoo.addons.website.controllers.main import QueryURL
 from odoo.addons.website_sale.controllers.main import WebsiteSale
 
+import pdb
+
 _logger = logging.getLogger(__name__)
 
 class WebsiteSaleGuadalstoreProductSeo(WebsiteSale):
@@ -60,6 +62,6 @@ class WebsiteSaleGuadalstoreProductSeo(WebsiteSale):
             'product': product,
             'optional_product_ids': [p.with_context({'active_id': p.id}) for p in product.optional_product_ids],
             'get_attribute_exclusions': self._get_attribute_exclusions,
-            'seoldjson': json.dumps(seoldjson),
+            'seoldjson': seoldjson,
         }
         return request.render("website_sale.product", values)
